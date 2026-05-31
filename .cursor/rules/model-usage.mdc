@@ -1,0 +1,16 @@
+---
+description: When to use Auto vs API models — protect Pro quota
+alwaysApply: true
+---
+
+# Model usage (NicOS)
+
+Default: **Auto**. See `AI/cursor_model_usage.md` for full rule.
+
+- **Auto / Composer**: scoring, templates, tracker updates, edits, research, canvases
+- **Sonnet (API)**: outreach, cover letters, interview prep, or when Auto fails twice
+- **Opus / Thinking (API)**: final review only — top opportunities (score ≥ 4.5), one pass max
+
+Never use premium API models for formatting, table updates, or quick lookups.
+
+If API usage > 80%, suggest switching to Auto-only until cycle reset.

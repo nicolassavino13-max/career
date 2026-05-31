@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "node AI/.cursor/hooks/sync_pipeline_canvas.mjs"
+      },
+      {
+        "command": "node AI/.cursor/hooks/sync_discovery_canvas.mjs"
+      }
+    ]
+  }
+}
