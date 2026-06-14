@@ -1,6 +1,6 @@
 # Mercado Livre — Gerente de Estratégia & Desenvolvimento Corporativo — São Paulo
 
-> **Legacy full report** (pre–Stage 1 split). Live status: `applications_tracker.md`. New roles: `templates/application_template.md` Stage 1 only.
+> **Legacy full report** (pre–Stage 1 split). Live status: `applications_tracker.md`. **Round 1 screen Fri 2026-06-12 14:00 BRT** — prep `preparation/mercadolivre_strategy_corp_dev/round_01_meli_corpdev_screen_2026-06-12/`
 
 ---
 
@@ -16,15 +16,15 @@
 | Industry | Digital platform / e-commerce / fintech adjacency (Mercado Pago) / adtech |
 | Source | LinkedIn — applied with internal referral from a friend who is a Manager at Mercado Livre |
 | Application link | https://www.linkedin.com/jobs/view/4412835253/ |
-| Recruiter | Not provided. Responses managed off LinkedIn per posting. |
+| Recruiter | Not listed on posting. **Outreach sent:** Isabela Miguel — **Gerente de Estratégia & Desenvolvimento Corporativo @ MELI** (team-side contact; LinkedIn DM 2026-06-08). **Staff TA backup:** Natalia Munaro (LATAM Business & Staff TA Director), Cesar Meneses (Líder TA LATAM Hiring). |
 | Compensation | Not disclosed. São Paulo BRL role. Must validate. |
 | Date discovered | 2026-05-25 |
-| Status | Applied (referral · awaiting ATS) |
+| Status | Interviewing (screen · **2026-06-12 14:00 BRT**) |
 | Weighted score | 4.10 / 5.00 |
 | Score band | Strong opportunity; prioritize |
-| Decision rank | 2 |
-| Priority rationale | Rank above Adyen despite lower score: Corp Dev fit, referral in hand, cleaner long-term strategy narrative |
-| Final recommendation | Strong opportunity; prioritize — referral submitted, strong role fit, good brand, compensation TBD |
+| Decision rank | **2** |
+| Priority rationale | Rank **2**. First interview booked post HR FUP — top Corp Dev track. |
+| Final recommendation | **Round 1 today** — validate scope, process, comp. |
 
 ---
 
@@ -253,12 +253,14 @@ Nicolas is at the right seniority level (4–7 years, upper end of band with McK
 
 | Item | Notes |
 |---|---|
-| Best path | Warm — referral already submitted by internal Manager friend. |
-| Connection type | Warm — direct referral from a Manager at Mercado Livre Brasil. |
-| Target contact | The manager friend who submitted the referral. Should be leveraged for process intel. |
-| First action | Follow up with the referring friend to confirm referral was submitted and ask for any internal color on the team, hiring timeline and what the interviewers value. |
-| Follow-up strategy | Check in with the referring contact every 5–7 days for process updates. Avoid putting pressure but stay visible. |
-| Follow-up date | TBD — ask referring friend for expected timeline |
+| Best path | Warm referral (internal Manager) + **team-side outreach** (Isabela Miguel · Corp Dev). |
+| Connection type | Warm referral + cold LinkedIn to Corp Dev team member. |
+| Primary contact | **Isabela Miguel** — **Gerente de Estratégia & Desenvolvimento Corporativo @ MELI**. LinkedIn DM sent **2026-06-08** — asked process status + best FUP path; mentioned McKinsey FS, referral, ~2 weeks no feedback. **Note:** team-side, not TA — may redirect to recruiter but can signal internal visibility. |
+| Internal Staff TA (backup) | **Natalia Munaro** — LATAM Business & Staff TA Director. **Cesar Meneses** — Líder TA LATAM Hiring · [linkedin.com/in/cesar-meneses-3005a4148](https://linkedin.com/in/cesar-meneses-3005a4148). Use if Isabela redirects or no reply by ~2026-06-11. |
+| Warm referrer | Internal Manager friend — **FUP planned 2026-06-09 (tarde)** for referral status + team color. |
+| First action | ~~Cold call~~ **LinkedIn message sent 2026-06-08** ✓ |
+| Follow-up strategy | If no reply from Isabela by ~2026-06-11 → polite bump or pivot to Staff TA. **Referrer FUP 2026-06-09 tarde.** |
+| Follow-up date | Referrer FUP **2026-06-09 (tarde)** · Isabela reply watch **~2026-06-11** |
 
 ---
 
@@ -268,9 +270,32 @@ Nicolas is at the right seniority level (4–7 years, upper end of band with McK
 
 Ei [Nome], queria te agradecer pelo referral. Só confirmando que você conseguiu submeter? Se sim, algum color do processo, do time ou do que eles mais valorizam nos candidatos seria super útil pra eu me preparar bem. Qualquer coisa que puder compartilhar já ajuda.
 
-## Recruiter / HR Message (if contact becomes available)
+## Cold call script — Isabela Miguel (~2 min)
 
-Hi [Name], I applied for the Gerente de Estratégia & Desenvolvimento Corporativo role with an internal referral. I am a McKinsey Financial Services Associate, IESE MBA and CFA Level III passer with strong financial modeling, M&A business case experience and multi-country LatAm strategy execution. Happy to share more if useful.
+**Objetivo:** entender processo e timeline — **não** pitch de 5 min.
+
+> Oi Isabela, tudo bem? Sou o Nicolas. Te ligo rapidinho — vi que você atua no recrutamento do Mercado Livre pela Accenture. Me candidatei à vaga de **Gerente de Estratégia & Desenvolvimento Corporativo** (Ads & Marketing) em SP, com **referral interno** de um manager, mas ainda não tive retorno do processo — faz quase duas semanas. Você consegue me ajudar a entender se essa vaga passa pelo seu time, se o referral chegou no ATS, e qual o timeline típico de triagem?
+
+**Se ela confirmar que é a req dela:**
+- Quantas etapas? Tem case ou teste?
+- Referral muda algo na fila ou é só ATS score?
+- Quem é o gestor / vertical (Ads & Marketing Corp Dev)?
+
+**Se não for a req dela:**
+> Sem problema — você sabe quem no TA Staff/Corp Dev Brasil/LATAM conduz essa vaga? Posso te mandar LinkedIn com nome + job ID 4412835253.
+
+**Fechamento:**
+> Perfeito, muito obrigado pelo tempo. Te mando um LinkedIn message com meu CV se fizer sentido.
+
+**Evitar:** mencionar MP Crypto/SME, comp floor cedo demais, ou pressionar por entrevista.
+
+## LinkedIn message (pós-call ou se não atender)
+
+Oi Isabela, sou o Nicolas — te liguei sobre a vaga **Gerente de Estratégia & Desenvolvimento Corporativo** (SP · job 4412835253). McKinsey FS + IESE MBA + CFA III, com referral interno. Apliquei há ~2 semanas e ainda sem retorno — qualquer orientação sobre o processo ou quem conduz a req ajuda muito. Obrigado!
+
+## Recruiter / HR Message (internal TA — backup)
+
+Hi [Name], I applied for the Gerente de Estratégia & Desenvolvimento Corporativo role (SP · LinkedIn 4412835253) with an internal referral. I am a McKinsey Financial Services Associate, IESE MBA and CFA Level III passer with strong financial modeling, M&A business case experience and multi-country LatAm strategy execution. Happy to share more if useful.
 
 ---
 
@@ -330,10 +355,11 @@ Hi [Name], I applied for the Gerente de Estratégia & Desenvolvimento Corporativ
 | Action | Owner | Due Date | Status |
 |---|---|---|---|
 | Confirm with referring friend that referral was submitted successfully | Nicolas | Done — 2026-05-25 | Completed |
-| Ask referring friend for internal color on team, process and what they value | Nicolas | Esta semana | Open |
-| Research Mercado Ads business, recent M&A, adtech landscape for LatAm | Nicolas | Before any interview | Open |
-| Validate compensation range early in the process | Nicolas | First recruiter contact | Open |
-| Prepare Corp Dev case: how to evaluate an adtech acquisition for Mercado Livre | Nicolas | Before any interview | Open |
+| **Cold call Isabela Miguel** (Accenture RPO · ML client) — process intel | Nicolas | **2026-06-08** | **Cancelled** — wrong profile; user contacted **Isabela Miguel · Gerente Corp Dev @ MELI** via LinkedIn instead |
+| **Round 01 prep — first screen 2026-06-12 14:00 BRT** | Nicolas | **2026-06-12** | **Done** — `preparation/mercadolivre_strategy_corp_dev/round_01_.../` |
+| Write `post_call.md` same day after screen | Nicolas | **2026-06-12** | Open |
+| Research Mercado Ads / adtech landscape | Nicolas | Before HM round | Open |
+| Validate compensation range | Nicolas | Round 1 if appropriate | Open |
 
 ---
 
@@ -390,6 +416,9 @@ Good but conditional. If the role evolves toward broader Mercado Livre platform 
 | 2026-05-25 | Opportunity identified via LinkedIn. Applied with internal referral from manager friend at Mercado Livre. |
 | 2026-05-25 | Opportunity evaluated using job search workflow. Score 4.10. File created. |
 | 2026-05-25 | Referral confirmed submitted by internal manager friend. Application now formally submitted. Status updated to Applied. |
+| 2026-06-01 | No reply from ML / HR yet. **FUP internal referrer** planned later this week (~2026-06-05). |
+| 2026-06-08 | **Still no HR reply** (14d post-apply). **LinkedIn message sent to Isabela Miguel** (Gerente Corp Dev @ MELI). FUP referrer ~2026-06-09. |
+| 2026-06-12 | **HR FUP** — phone requested → **first interview Fri 14:00 BRT**. Status → Interviewing. Round 01 prep created. |
 
 ---
 

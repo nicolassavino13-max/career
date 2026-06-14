@@ -1,92 +1,113 @@
-# PROMOTE — Discovery → Applications
+# PROMOTE — Stage 1 (score, decide, enter pipeline)
 
-Move one row from **`Career/opportunities_tracker.md`** into the Job Search OS (Prompt **§1**). This is the handoff from discovery to Stage 1 scoring + tracker.
+**Single entry point** for all new roles entering the applications layer. Runs `AI/job_search_workflow.md` end-to-end.
+
+Two paths — same output (Stage 1 file + `applications_tracker.md`):
+
+| Path | When | You provide |
+|---|---|---|
+| **A — Discovery** | Role already in `opportunities_tracker.md` | Company / role name (or `PROMOTE Nubank`) |
+| **B — Inbound / research** | JD from recruiter, LinkedIn, referral, your own research | JD text and/or URL + any context |
 
 ---
 
-## Copy-paste (say which role to promote)
+## Path A — From discovery
 
 ```text
-PROMOTE
-
-Promote this discovery candidate to Applications (run full §1):
-
-Company / role: [e.g. Visa — Senior Manager, Product Strategy and Planning]
-
-@AI/snippets/PROMOTE.md
-@AI/prompt_library.md §1
+PROMOTE: Visa — Senior Manager, Product Strategy and Planning
 ```
 
-Shorthand (same thing):
-
-```text
-PROMOTE: [Company] — [Role title]
-```
-
-Minimal (agent resolves from discovery — **company name is enough** if one clear row):
+Minimal:
 
 ```text
 PROMOTE Nubank
 ```
 
-No need to paste `@AI/snippets/PROMOTE.md` or `@§1` — `AI/.cursor/rules/job-search.mdc` triggers the full flow.
+Agent finds the row in `Career/opportunities_tracker.md`, fetches JD from link, runs Stage 1, marks row **`Promoted`**.
+
+---
+
+## Path B — Inbound / own research (no discovery row)
+
+```text
+PROMOTE
+
+@AI/snippets/PROMOTE.md
+
+[Paste JD or careers URL]
+
+Context: [referral, recruiter name, inbound WhatsApp, why you're looking at this, etc.]
+```
+
+Shorthand:
+
+```text
+PROMOTE
+
+Inbound from recruiter — apply this week.
+
+[Paste JD or URL]
+```
+
+Agent runs Stage 1 from pasted content. If no discovery row exists → **backfill** one with Decision **`Promoted`** (audit trail).
 
 ---
 
 ## Agent instructions
 
-### 1. Find the candidate
+Follow **`AI/job_search_workflow.md`** end-to-end.
 
-- Read `Career/opportunities_tracker.md`
-- Match the row the user named (company + role; partial match OK)
-- If ambiguous, list matching rows and ask once
-- If **Already processed** or **Promoted**, stop and point to existing `Career/Applications/` file + tracker
-- Before §1: confirm company+role is **not** already in `applications_tracker.md` (duplicate guardrail)
+### 1. Resolve inputs
 
-### 2. Gather inputs for §1
+**Path A (discovery named):**
+- Read `Career/opportunities_tracker.md` — match company + role (partial OK)
+- If ambiguous → list matches, ask once
+- If **Promoted** or **Already processed** → stop; point to existing file + tracker rank
+- Fetch JD from row **Link**; if aggregator/stale → official source + web; flag assumptions
 
-From the discovery row use:
-- Company, role, location, source, link, date found, reason, initial fit
+**Path B (JD / URL pasted):**
+- Use pasted JD/URL as primary source
+- Use user **Context** for source, referral, urgency
+- Check `opportunities_tracker.md` for existing row (update vs create)
 
-Then obtain a **job description**:
-- Prefer: fetch/read from the **Link** in the row
-- If link fails or is aggregator-only: use discovery **Reason** + web search for official posting; flag assumptions
-- Do not invent JD text
+**Both paths — duplicate guardrail:**
+1. Match company + role in **`applications_tracker.md`** → stop; point to existing file
+2. Match in **`opportunities_tracker.md`** as **Promoted** → stop unless user explicitly wants refresh
 
-### 3. Run Job Opportunity Processing (§1)
+### 2. Read (always)
 
-Execute **`AI/prompt_library.md` §1 — Job Opportunity Processing** end-to-end:
+- `AI/job_search_workflow.md`
+- `Career/search_context/master_context.md`
+- `Career/search_context/career_positioning.md`
+- `Career/search_context/role_scorecard.md`
+- `Career/applications_tracker.md`
 
-- Read: `AI/job_search_workflow.md`, `Career/search_context/master_context.md`, `Career/search_context/career_positioning.md`, `Career/search_context/role_scorecard.md`, `Career/applications_tracker.md`
-- Write: Stage 1 file in `Career/Applications/` + update `applications_tracker.md` (Pipeline Summary, Open Items, Update Log)
-- Canvas auto-syncs when tracker/opportunity files are saved (`AI/.cursor/hooks/sync_pipeline_canvas.mjs`)
-- Do **not** run Stage 2 unless role is already active
+### 3. Execute Stage 1 (in order)
 
-### 4. Update discovery layer
+1. **Capture** — company, role, location, link, source, date discovered
+2. **Analyze** — strategic fit (template dimensions)
+3. **Score** — 7 dimensions from `role_scorecard.md` + weighted total + band
+4. **Decide** — recommendation + **decision rank** + priority rationale (rank ≠ score)
+5. **Write** — `Career/Applications/company_role_location_YYYY-MM-DD.md` from `templates/application_template.md`
+6. **Update tracker** — Pipeline Summary, Open Items, Update Log
+7. **Discovery layer** — Path A: mark row **`Promoted`**. Path B: append row **`Promoted`** if missing
+8. **Canvas** — auto-sync on save; fallback `node AI/.cursor/hooks/sync_pipeline_canvas.mjs --force`
 
-In `Career/opportunities_tracker.md` for that row:
+**Do not** generate interview prep (→ **ADVANCE**) or apply assets (→ prompt §4) unless role is already active.
 
-| Field | New value |
-|---|---|
-| Decision | `Promoted` |
-| Next action | `Stage 1 done — [filename].md` + tracker updated |
-| Date | Add promote date in Update Log under Weekly Discovery Notes if useful |
+### 4. Reply in chat
 
-Do not delete the row — keep for audit trail.
-
-### 5. Reply in chat
-
-- Which discovery row was promoted
-- Application filename created
-- Weighted score, score band, **decision rank**, recommendation
+- Application filename + tracker rank
+- Weighted score, score band, recommendation
 - Top 3 risks
-- Tracker rank vs Revolut / Mercado Livre / Adyen
+- Path used (discovery row vs inbound)
+- Rank vs top pipeline roles
 
 ---
 
 ## Constraints
 
-- Canonical discovery file: `Career/opportunities_tracker.md` (not temp exports)
-- No duplicate application files if company+role already in tracker
+- Do not hallucinate JD facts; flag assumptions
 - Do not edit `career_goals.md` or `target_companies.md` for pipeline status
-- Default model: **Auto**
+- Default model: **Auto** (`AI/cursor_model_usage.md`)
+- **RUN_DISCOVERY** does not run as part of PROMOTE

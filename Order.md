@@ -4,7 +4,7 @@ Personal operating system for career transition and AI-native workflows.
 
 ## Job search (start here)
 
-**`Career/JOB_SEARCH.md`** — paste JD → Prompt §1 → tracker + one report.
+**`Career/JOB_SEARCH.md`** — **PROMOTE** → tracker + Stage 1 report.
 
 | File | Role |
 |---|---|
@@ -12,12 +12,18 @@ Personal operating system for career transition and AI-native workflows.
 | `Career/opportunities_tracker.md` | Pre-screened leads (RUN_DISCOVERY) |
 | `Career/search_context/career_positioning.md` | Agent strategy snapshot |
 | `Career/search_context/role_scorecard.md` | Scoring |
-| `AI/prompt_library.md` | Commands §1–§8 |
+| `AI/prompt_library.md` | Commands (PROMOTE · UPDATE · ADVANCE · §2–§7) |
 | `AI/canvases/` | Opportunities + applications dashboards (`README.md`) |
 | `AI/.cursor/` | Hooks, canvas paths, agent rules (`README.md`) |
-| `AI/snippets/PROMOTE.md` | Discovery → §1 handoff |
+| `AI/snippets/PROMOTE.md` | Stage 1 — discovery + inbound |
 | `AI/job_search_workflow.md` | Short runbook |
 | `AI/backlog.md` | Future automation (not runtime) |
+
+## PowerPoint (Windows)
+
+**`BUILD_DECK`** → `AI/snippets/BUILD_DECK.md` · skills: `ppt-consulting` · `ppt-com` · `ppt-template-builder`
+
+**OceanPact pilot** → `Projects/ocean pact pilot/` (`sources/` refs · `decks/` outputs)
 
 ## Other active
 
@@ -37,4 +43,4 @@ Health · Finance · Research · Projects · Inbox
 
 1. One home per fact — pipeline status → tracker only.
 2. New job → Stage 1 + tracker.
-3. Friday → Prompt §7.
+3. Friday → Prompt §7 (weekly review).

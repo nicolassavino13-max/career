@@ -14,17 +14,18 @@
 | Function | Strategic Partnerships / Alliances / Commercial |
 | Seniority | Senior individual contributor. Explicitly NOT a people manager role. |
 | Industry | Global payments infrastructure / financial technology |
-| Source | Greenhouse. Internal contact outreach sent 2026-05-26 — conversation before applying to secure referral. |
+| Source | Greenhouse. Applied via **Rafaela Mello** internal referral (2026-06-12). |
 | Application link | https://job-boards.greenhouse.io/adyen/jobs/7913587 |
-| Recruiter | Not provided |
+| Recruiter | Not provided yet — await signal post internal CV |
 | Compensation | Not disclosed. São Paulo BRL role. Likely includes variable/commercial component. Must validate. |
 | Date discovered | 2026-05-25 |
-| Status | Mapped (awaiting referral) |
+| Date applied | 2026-06-12 (referral · Rafaela Mello — internal CV path) |
+| Status | Applied (referral · **Rafaela Mello**) |
 | Weighted score | 4.45 / 5.00 |
 | Score band | Strong opportunity; prioritize (score) — conditional (action) |
-| Decision rank | 3 |
-| Priority rationale | Score 4.45 but rank 3: commercial/typecast risk; pursue only if Revolut and Mercado Livre stall |
-| Final recommendation | Conditional — pursue only if Revolut and Mercado Livre do not materialize. Valuable commercial skills acquisition with Adyen brand, but not aligned with long-term strategy/Corp Dev destination. Max 1–2 year commitment with clear exit plan. |
+| Decision rank | **4** |
+| Priority rationale | Applied with **Rafaela Mello** referral (internal path). Await recruiter ~2026-06-18. |
+| Final recommendation | **Applied — await recruiter/HM.** Hold extra Greenhouse apply unless Rafaela/recruiter requests. |
 
 ---
 
@@ -361,11 +362,11 @@ Hi [Name], just following up on my message. Still very interested in understandi
 | Action | Owner | Due Date | Status |
 |---|---|---|---|
 | Reach out to internal Adyen contact — get intel on role scope, IC trajectory and referral before applying | Nicolas | Done — 2026-05-26 | Completed |
-| Await internal contact reply; schedule conversation before applying | Nicolas | ~2026-05-29 if no reply | Open |
-| Validate compensation structure (base + variable) and whether it can meet BRL 30k+ floor | Nicolas | First call with contact | Open |
-| Validate whether IC framing is a real seniority concern or standard Adyen leveling | Nicolas | First call with contact | Open |
-| Research Adyen Partner Program and GSI landscape in Brazil before the contact conversation | Nicolas | Before reaching contact | Open |
-| Apply through Greenhouse only after referral is confirmed | Nicolas | After referral secured | Open |
+| Coffee chat with Rafaela | Nicolas | — | **Skipped** — no call; CV path instead |
+| Confirm with Rafaela: Greenhouse apply needed or internal CV sufficient? | Nicolas | **2026-06-14** | **Applied via referral — hold unless asked** |
+| Await recruiter / HM signal after internal application | Nicolas | ~**2026-06-18** | Open |
+| Validate compensation + IC scope when recruiter reaches out | Nicolas | First recruiter touch | Open |
+| Apply Greenhouse **only if** Rafaela or recruiter asks | Nicolas | Conditional | Hold |
 
 ---
 
@@ -432,6 +433,8 @@ If Revolut and Mercado Livre both fail to materialize, Adyen Alliances is a legi
 |---|---|
 | 2026-05-25 | Opportunity identified and mapped using job search workflow. Referral contact identified internally. Not yet applied. Score 4.45. |
 | 2026-05-26 | Outreach sent to internal Adyen contact — conversation before applying to validate fit and pursue referral. |
+| 2026-06-11 | **Rafaela Mello** requested CV and forwarded **internally** (no coffee chat). Hold Greenhouse apply until she/recruiter confirms process. |
+| 2026-06-12 | **Applied** via **Rafaela Mello** referral (internal path). Status → Applied. Await recruiter. |
 
 ---
 

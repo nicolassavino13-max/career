@@ -1,28 +1,40 @@
 # Job Search — Runbook
 
-> **Runtime doc (~1 page).** Scoring: `Career/search_context/role_scorecard.md`. Entry point: `Career/JOB_SEARCH.md`. Prompts: `AI/prompt_library.md` §1 and §7. Backlog: `AI/backlog.md`.
+> **Runtime doc (~1 page).** Scoring: `Career/search_context/role_scorecard.md`. Entry point: `Career/JOB_SEARCH.md` (full architecture). Prompts: `AI/prompt_library.md`. Backlog: `AI/backlog.md`.
 
 ---
 
 ## What this system does
 
-Map every relevant role → score → decide → save → track. Build market intelligence even when you do not apply.
+Map every relevant role → score → decide → save → track. When interviews start → prep and iterate via **ADVANCE** (`AI/job_advancement_workflow.md`). Build market intelligence even when you do not apply.
+
+---
+
+## Three stages (this file = stage 2)
+
+| Stage | Workflow | Trigger |
+|---|---|---|
+| Discovery | `AI/job_discovery_workflow.md` | RUN_DISCOVERY |
+| **Search (this runbook)** | `AI/job_search_workflow.md` | **PROMOTE** |
+| Advancement | `AI/job_advancement_workflow.md` | ADVANCE |
+
+Full architecture diagram: `Career/JOB_SEARCH.md`.
 
 ---
 
 ## Happy path (default)
 
-**Inbound JD or URL** (recruiter message, referral, direct link):
+**Inbound JD or URL** (recruiter, referral, own research):
 
-1. Paste JD or URL in Cursor → agent runs **Prompt §1** (`AI/prompt_library.md`).
-2. Agent writes Stage 1 file + updates `Career/applications_tracker.md`.
-3. If the role was **not** already in discovery: add a row to `Career/opportunities_tracker.md` with Decision **`Promoted`** (audit trail — do not re-run discovery scan for it).
+1. **`PROMOTE`** + paste JD/URL + context → `AI/snippets/PROMOTE.md` + this runbook.
+2. Stage 1 file + `applications_tracker.md`.
+3. Backfill discovery row **`Promoted`** if not already in `opportunities_tracker.md`.
 
-**Proactive search** (no JD in hand):
+**From discovery** (role already in opportunities tracker):
 
 1. **RUN_DISCOVERY** → `Career/opportunities_tracker.md` + discovery canvas.
-2. Pick from **Weekly Top 3** (or `Process now` rows when link is validated).
-3. **PROMOTE** → §1 → Stage 1 file + applications tracker + applications canvas.
+2. Pick from **Weekly Top 3** (or `Process now` when link validated).
+3. **`PROMOTE: [Company] — [Role]`** → Stage 1 file + applications tracker + applications canvas.
 
 Do **not** edit `career_goals.md` or `target_companies.md` for pipeline status in either path.
 
@@ -39,16 +51,19 @@ Do **not** edit `career_goals.md` or `target_companies.md` for pipeline status i
 
 ---
 
-## Stage 1 vs Stage 2
+## Stage 1 vs active-role assets vs interview prep
 
-| Stage | When | Contents |
-|---|---|---|
-| **1** | Every mapped role | JD, summary, fit, scorecard scores, brief positioning, networking, next actions |
-| **2** | Role is **active** | CV tailoring, outreach drafts, interview prep — append to same file or `*_stage2.md` |
+| Layer | When | Where | Contents |
+|---|---|---|---|
+| **Stage 1** | Every mapped role | `Applications/*.md` | JD, fit, scores, positioning thesis, next actions |
+| **Apply assets (§4)** | Role active — apply/outreach | Append to `Applications/*.md` | CV bullets, cover letter, referral drafts, apply checklist |
+| **Interview prep (ADVANCE)** | Call scheduled | `preparation/{process}/round_N/` | Questions, STAR picks, checklist, `post_call.md` |
 
 **Active** = referral secured, recruiter engaged, interview scheduled, or explicit apply decision.
 
-Use `Career/Applications/templates/application_template.md`.
+**Do not** put interview round prep in the opportunity file. Strategic analysis stays in Stage 1; execution stays in `preparation/`.
+
+Use `Career/Applications/templates/application_template.md` for Stage 1.
 
 ---
 
@@ -56,7 +71,7 @@ Use `Career/Applications/templates/application_template.md`.
 
 `Career/applications_tracker.md` is the **only** live pipeline view (markdown source of truth).
 
-Update per new/changed opportunity (§1, PROMOTE, weekly review, or any status change):
+Update per new/changed opportunity (PROMOTE, weekly review, UPDATE, or any status change):
 - One row in **Pipeline Summary** (rank, score, status, next step, due, report filename)
 - **Open Items** row if comp or follow-up pending
 - One line in **Update Log**
@@ -111,10 +126,11 @@ Document override in `Priority rationale`.
 |---|---|
 | 2 Networking | Before a call; optional: read opportunity file |
 | 3 Company research | Uses `target_companies.md` + web |
-| 4 Stage 2 prep | Role active — extend opportunity file |
+| 4 Apply assets | CV/outreach drafts → append to opportunity file (**not** interview prep) |
 | 5 Compare opps | Read `applications_tracker.md` + opportunity files only |
 | 6 System review | Periodic OS audit |
-| 7 Weekly review | Friday — update tracker only |
+| 7 Weekly review | Friday — tracker + `preparation/*/process_log.md` sweep |
+| — | **Interview prep** → `ADVANCE` · **Status sync** → `UPDATE` |
 
 ---
 

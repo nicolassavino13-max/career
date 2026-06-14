@@ -1,6 +1,6 @@
 # Mercado Pago — Gerente de Negócios Cripto — São Paulo
 
-> **Stage 1** opportunity report. Live status: `applications_tracker.md`.
+> **Stage 1** — Gerente Cripto **posting closed**; Ivan (MP Banking) offered **career chat 2026-06-06 15:30 BRT**. **Active prep:** `preparation/mercadopago_ivan_career_2026-06-06/prep.md`. Tracker: `applications_tracker.md`.
 
 ---
 
@@ -20,12 +20,13 @@
 | Compensation | Not disclosed. São Paulo BRL role. Must validate vs BRL 30k+ net floor. |
 | Date discovered | 2026-05-27 |
 | Date applied | 2026-05-27 |
-| Status | Applied (direct · awaiting ATS) |
+| Status | Withdrawn (posting closed · late) |
+| Posting status | **Closed** — spot filled before process advanced; Ivan career chat **2026-06-06** confirmed; pivot to SME Engagement with Ivan support |
 | Weighted score | 4.40 / 5.00 |
 | Score band | Strong opportunity; prioritize |
-| Decision rank | 2 |
-| Priority rationale | Best MELI-group fit (4.40); applied cold with strong ATS profile. Rank 2 above Corp Dev — MP Crypto is the preferred destination; ML Corp Dev referral kept as parallel lever if HR contacts first. |
-| Final recommendation | Strong opportunity; prioritize — wait on ATS; build warm path to crypto HM (Ivan + others); use Corp Dev referral momentum to rebalance if ML HR reaches out first. |
+| Decision rank | — (closed) |
+| Priority rationale | Was rank 2 on score (**4.40**). Closed — arrived too late. Ivan relationship **preserved** and redirected to SME Engagement (`mercadopago_gerente_engajamento_sme_saopaulo_2026-06-05.md`). |
+| Final recommendation | **Closed.** Do not pursue further. Ivan call (2026-06-06) was positive — he will support MP process via **SME Engagement** referral. ML Corp Dev stays parallel (separate team, no collision). |
 
 ---
 
@@ -147,7 +148,7 @@ This is the **strongest Mercado-group role** for Nicolas's stated destination: f
 
 **Active strategy (2026-05-27):**
 
-1. **Wait on MP Crypto ATS** — applied cold; profile is strong for screening (McKinsey FS, digital wallet, payments, stablecoins). No action until recruiter/HR contact unless Ivan or another warm path opens a door.
+1. **Ivan career chat (2026-06-06 15:30 BRT)** — posting closed; use call to map Manager+ paths inside MP and secure 1–2 intros. Prep: `preparation/mercadopago_ivan_career_2026-06-06/prep.md`.
 2. **Corp Dev referral as rebalance lever** — ML Corp Dev stays live with referral on a separate track. If ML HR reaches out first, use the conversation to **signal preference for MP Crypto** and ask whether they can route internally.
 3. **Build warm path to crypto HM** — Ivan (MP Banking, IESE/Bain network) messaged 2026-05-27; continue sourcing 1–2 more contacts closer to crypto vertical. One contact may not be enough — treat as ongoing until HM/recruiter identified.
 
@@ -195,7 +196,7 @@ McKinsey Financial Services Associate with direct **stablecoin consortium**, dig
 | Best path | **Semi-warm** — Ivan (MP Banking); ML Corp Dev referrer as secondary lever if HR contacts |
 | Target contact | Ivan → crypto recruiter/HM; + 1–2 more MP crypto/fintech contacts |
 | First action | Await Ivan reply; follow up ~5–7 days if silent |
-| Follow-up date | ~2026-06-03 if no reply from Ivan |
+| Follow-up date | **2026-06-06 15:30 BRT** — career chat scheduled (Ivan replied 2026-06-01) |
 
 ### Ivan outreach (sent 2026-05-27)
 
@@ -215,7 +216,13 @@ McKinsey Financial Services Associate with direct **stablecoin consortium**, dig
 > Brigadao desde ja,
 > Abs
 
-**Assessment:** Tone is good — casual, IESE/Bain hook, clear ask. Banking ≠ crypto but plausible bridge to org/recruiter. No guarantee; one contact likely insufficient — continue sourcing.
+**Assessment:** Tone is good — casual, IESE/Bain hook, clear ask. Banking ≠ crypto but plausible bridge to org/recruiter.
+
+### Ivan reply (2026-06-01)
+
+- **Gerente de Negócios Cripto** spot **closed** (filled).
+- Ivan offered time to talk about **career and opportunities inside Mercado Pago** — strong outcome vs silence.
+- **Scheduled:** Friday **2026-06-06 15:30 BRT** (Rio — confirm format/channel with Ivan).
 
 ### Rebalance script (if ML Corp Dev HR contacts first)
 
@@ -227,12 +234,14 @@ McKinsey Financial Services Associate with direct **stablecoin consortium**, dig
 
 | Action | Owner | Due | Status |
 |---|---|---|---|
-| Wait on MP Crypto ATS / recruiter contact | Nicolas | Ongoing | In progress |
-| Await Ivan reply; follow up if silent | Nicolas | ~2026-06-03 | In progress |
+| Prep Ivan career chat → `preparation/mercadopago_ivan_career_2026-06-06/prep.md` | Nicolas | Before 2026-06-06 | **In progress** |
+| Ivan career conversation | Nicolas | **2026-06-06 15:30 BRT** | Scheduled |
+| Post-call: thank-you + notes; update tracker; request intros | Nicolas | 2026-06-06 | Pending |
 | Find 1–2 more MP crypto/fintech contacts (LinkedIn, IESE, McKinsey alumni) | Nicolas | This week | Open |
-| If ML Corp Dev HR contacts: use rebalance script → signal Crypto preference | Nicolas | When triggered | Open |
-| Research Meli dolar, MP crypto roadmap, Brazil crypto regulation (BCB) | Nicolas | Before interview | Open |
+| If ML Corp Dev HR contacts: use rebalance script → signal MP preference | Nicolas | When triggered | Open |
+| Research Meli dolar, MP crypto roadmap, Brazil crypto regulation (BCB) | Nicolas | Before 2026-06-06 | Open |
 | Apply direct to MP Crypto | Nicolas | 2026-05-27 | **Done** |
+| Monitor other MP postings (Online Payments, etc.) | Nicolas | Ongoing | Open |
 
 ---
 
@@ -258,3 +267,5 @@ Mercado Pago Crypto is the highest-signal Mercado-group path for becoming a glob
 |---|---|
 | 2026-05-27 | PROMOTE inbound — Stage 1 created; tracker rank 3; discovery row backfilled as Promoted. |
 | 2026-05-27 | Applied direct (cold). Strategy: wait ATS; Corp Dev referral as rebalance lever; Ivan (MP Banking) outreach sent. Rank → 2 (MP Crypto priority over ML Corp Dev). |
+| 2026-06-01 | Ivan replied: **Cripto posting closed**; offered career/opportunities chat. **Scheduled 2026-06-06 15:30 BRT.** Status → Interviewing (career chat). Prep folder created. |
+| 2026-06-06 | Ivan call complete — great conversation; Ivan will support MP process. Redirected to **Gerente Engajamento SME** (live). Status → **Withdrawn (posting closed · late)**. Active MP track = SME file. |

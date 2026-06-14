@@ -1,6 +1,6 @@
 # Revolut - Strategy & Operations Manager (Revenue Team) - UAE / Dubai
 
-> **Active pipeline #1** — Screen Call **2026-06-02 09:30** (Google Meet). Live status: `applications_tracker.md`.
+> **Rejected (post-screen · 2026-06-06)** — Matt email; no feedback. **Process log:** `preparation/revolut_strategy_operations_dubai/process_log.md` · **Rejection notes:** `preparation/revolut_strategy_operations_dubai/rejection_2026-06-06.md`. Tracker: `applications_tracker.md`.
 
 ---
 
@@ -17,15 +17,15 @@
 | Source | **Inbound recruiter outreach from Revolut** — Primary source. JD page is supplementary. |
 | Application link | https://www.revolut.com/careers/position/strategy-operations-manager-e4b7c063-41c5-4afc-8031-2323db04b9f7/ |
 | Recruiter | Matt Bottomley — Global Talent Acquisition Leader, Revolut |
-| Compensation | USD 10k+ net/month confirmed for UAE. Meets long-term target. Full relocation and visa sponsorship confirmed for Nicolas and family. |
+| Compensation | **Screen-validated (2026-06-02):** base **333–370k AED/year**; performance bonus **31%** (50% cash / 50% equity); stock options **4y vest / 1y cliff** (~**£10k** grant cited). Prior recruiter anchor USD 10k+ net still directionally aligned. Relocation + visa confirmed. |
 | Date discovered | 2026-05-25 |
-| Status | Interviewing (screen · 2026-06-02) |
+| Status | Rejected (post-screen · no feedback) |
 | Scheduling contact | Cavan Quah — cavan.quah@revolut.com (scheduling / process questions) |
 | Weighted score | 4.85 / 5.00 |
 | Score band | Must pursue aggressively |
-| Decision rank | 1 |
-| Priority rationale | Highest score, inbound recruiter, best long-term Strategy & Ops / Revenue track |
-| Final recommendation | Must pursue aggressively — all major variables confirmed positive |
+| Decision rank | — (closed) |
+| Priority rationale | Was rank 1 (**4.85**). Rejected post-screen 2026-06-06. Role fit remains benchmark; process closed for Dubai. |
+| Final recommendation | **Closed (Dubai).** Optional geo pivot: reply Matt re **Brazil remote** or **Spain remote** before cold reapply. Do not duplicate-apply same job ID without recruiter OK. |
 
 ---
 
@@ -391,11 +391,12 @@ Hi Matt, just following up on my note below. I am interested in moving forward a
 |---|---|---|---|
 | Reply to Matt Bottomley with email and updated CV — express UAE preference and request call | Nicolas | 2026-05-21 | Completed |
 | Send follow-up to Matt — short, direct, no pressure | Nicolas | 2026-05-26 | Completed |
-| Confirm Google Meet invite + timezone; save Cavan contact for reschedules | Nicolas | 2026-05-28 | Pending |
-| Screen Call prep (see Stage 2 below) | Nicolas | 2026-06-01 | Pending |
-| Screen Call — 30 min video | Nicolas | **2026-06-02 09:30** | Scheduled |
-| Post-call: thank-you + notes; update tracker; prep next round | Nicolas | 2026-06-02 | Pending |
-| Validate seniority band, sub-team, UAE comp structure | Nicolas | Screen call | Pending |
+| Confirm Google Meet invite (logged as **09:30 BRT**); save Cavan contact for reschedules | Nicolas | 2026-05-28 | Pending |
+| Screen Call prep → `round_01_revolut_stratops_screen_2026-06-02/prep.md` | Nicolas | 2026-06-02 | **Done** |
+| Screen Call — 30 min video | Nicolas | **2026-06-02 09:30 BRT** | **Done** — `round_01/.../post_call.md` |
+| Await EOW advance decision | Nicolas | **~2026-06-06–08** | Pending |
+| If advanced: cognitive + cultural assessments | Nicolas | TBD post-EOW | Prep ready → `round_02_revolut_stratops_assessments_2026-06-08/prep.md` |
+| Thank-you to Matt (optional) | Nicolas | 2026-06-02 | Open |
 | Search IESE / McKinsey alumni at Revolut UAE or Revenue (optional) | Nicolas | Before 2026-06-02 | Open |
 
 ---
@@ -412,12 +413,17 @@ Hi Matt, just following up on my note below. I am interested in moving forward a
 - Fully remote / flexible work confirmed, no mandatory office days.
 - Career growth archetype confirmed: BCG to Director in 4 years.
 
+**Resolved on screen (2026-06-02):**
+- Full **5-stage** interview process (assessments → PS → take-home → culture 60m → team 60m).
+- UAE comp structure: **333–370k AED** base + **31%** bonus (50/50 cash/equity) + options (**4y/1y cliff**, ~£10k).
+- Team model: **special projects** across **16 BUs**; strategy + implementation; MBB-heavy team.
+
 **Still open:**
-- Screen Call interviewer identity (Matt vs HM vs talent partner) — confirm at start of call.
-- Exact seniority band and reporting line unknown.
-- Sub-team within Revenue team not specified.
-- Full interview process steps and timeline after screen call.
-- UAE comp structure (base / bonus / equity) — validate on screen call.
+- **EOW** advance decision.
+- **PS interview** definition and interviewer.
+- Exact seniority band and reporting line / HM name.
+- Sub-team / first BU assignment within Revenue.
+- Assessment vendor and take-home parameters.
 
 ## Additional Observations
 
@@ -465,13 +471,16 @@ Very high. If secured in Dubai or a strong global setup, this role could materia
 | 2026-05-25 | File refined with recruiter message context. UAE, relocation, visa, remote, Revenue team confirmed. Score updated to 4.80. |
 | 2026-05-25 | USD 10k+ net/month compensation for UAE confirmed. Score updated to 4.85. Matt has not replied yet (4 business days). Follow-up planned for 2026-05-26. |
 | 2026-05-26 | Follow-up message sent to Matt Bottomley on LinkedIn. Awaiting reply. |
-| 2026-05-27 | Matt replied — advanced to **Screen Call**. Scheduled **2026-06-02 09:30** (Google Meet). Scheduling contact: Cavan Quah. Stage 2 prep added. |
+| 2026-05-27 | Matt replied — advanced to **Screen Call**. Scheduled **2026-06-02 09:30 BRT** (Google Meet). Scheduling contact: Cavan Quah. Stage 2 prep added. |
+| 2026-06-01 | Prep folder migrated → `revolut_strategy_operations_dubai/round_01_.../prep.md`. |
+| 2026-06-02 | **Screen complete.** 5-stage process; AED comp validated. EOW advance. `process_log.md`, `post_call.md`, `round_02` assessments prep. |
+| 2026-06-06 | **Rejected (post-screen)** — Matt email; no specific feedback. Dubai track closed. User considering Brazil/Spain geo pivot. |
 
 ---
 
-# Stage 2 — Screen Call prep (2026-06-02)
+# Stage 2 — Screen Call prep (2026-06-02 09:30 BRT)
 
-> **Format:** 30 min video · Google Meet · Next round after inbound recruiter thread. Interviewer TBC until confirmation email arrives.
+> **Format:** 30 min video · Google Meet · **09:30 BRT (Rio de Janeiro)** · Next round after inbound recruiter thread. Interviewer TBC until confirmation email arrives.
 
 ## What this round likely is
 

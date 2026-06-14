@@ -1,6 +1,7 @@
 # Career Positioning (agent snapshot)
 
 > **Use this instead of full `career_goals.md` for scoring and Stage 1 reports.** Full narrative: `career_goals.md`.
+> **Interview verbal scripts** (STAR, tell-me-about-yourself) live in `Career/Applications/preparation/base/` — not here. See `Career/JOB_SEARCH.md` → Context layers.
 
 ---
 

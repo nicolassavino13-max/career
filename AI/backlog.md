@@ -10,7 +10,7 @@ Ideas for later automation. Do not implement until manual workflow breaks at ~10
 - **Scoring** — JSON scores from `role_scorecard.md` only; human approves
 - **Tracker sync** — YAML frontmatter on opportunity files → regenerate Pipeline Summary
 - **Outreach** — draft from opportunity file + contacts
-- **Interview prep** — Stage 2 on trigger
+- **Interview prep** — `ADVANCE` + `AI/job_advancement_workflow.md` (done)
 - **Weekly dashboard** — Prompt §7 on schedule (`/loop` or calendar)
 
 ---

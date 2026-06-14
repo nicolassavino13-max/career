@@ -19,7 +19,7 @@ import {
 } from 'cursor/canvas';
 
 const SOURCE = 'Career/opportunities_tracker.md';
-const SCAN_DATE = '2026-05-31';
+const SCAN_DATE = '2026-06-12';
 
 type Candidate = {
   dateFound: string;
@@ -42,14 +42,14 @@ const candidates = [
     "company": "Revolut",
     "role": "Strategy & Operations Manager — Revenue Team",
     "seniority": "Manager",
-    "location": "UAE / Dubai",
+    "location": "UAE / Dubai (also Remote: Brazil · Spain)",
     "source": "Recruiter",
     "link": "https://www.revolut.com/careers/position/strategy-operations-manager-e4b7c063-41c5-4afc-8031-2323db04b9f7/",
     "linkStatus": "Live",
     "fit": "Very high",
     "decision": "Already processed",
-    "reason": "In tracker rank 1",
-    "next": "Follow up Matt"
+    "reason": "**Rejected post-screen 2026-06-06** (Matt); same job ID still **Live** Brazil · Spain · SP 2026-06-10",
+    "next": "Geo pivot via OMR row or reply Matt — do not duplicate ATS apply"
   },
   {
     "dateFound": "2026-05-25",
@@ -57,13 +57,13 @@ const candidates = [
     "role": "Gerente de Estratégia & Desenvolvimento Corporativo",
     "seniority": "Manager",
     "location": "São Paulo",
-    "source": "LinkedIn / referral",
-    "link": "https://www.linkedin.com/jobs/view/4412835253/",
-    "linkStatus": "Aggregator",
+    "source": "Eightfold / referral",
+    "link": "https://mercadolibre.eightfold.ai/careers/job/38908589",
+    "linkStatus": "**Live**",
     "fit": "High",
     "decision": "Already processed",
-    "reason": "In tracker rank 2",
-    "next": "ML friend intel"
+    "reason": "Applied (referral); **HR replied 2026-06-12** — phone requested",
+    "next": "Await recruiter contact"
   },
   {
     "dateFound": "2026-05-25",
@@ -76,8 +76,8 @@ const candidates = [
     "linkStatus": "Live",
     "fit": "High",
     "decision": "Already processed",
-    "reason": "In tracker rank 3",
-    "next": "Await contact"
+    "reason": "Applied (referral · **Rafaela Mello** 2026-06-12)",
+    "next": "Await recruiter ~2026-06-18"
   },
   {
     "dateFound": "2026-05-26",
@@ -129,11 +129,11 @@ const candidates = [
     "location": "Dubai, UAE",
     "source": "Greenhouse EU",
     "link": "http://job-boards.eu.greenhouse.io/ziina/jobs/4650048101",
-    "linkStatus": "Live",
+    "linkStatus": "**Stale**",
     "fit": "Medium",
     "decision": "Monitor",
-    "reason": "Strategic finance at MENA fintech; founding FP&A — adjacent to Corp Dev/strategic finance",
-    "next": "Validate seniority scope; run §1 if comp/strategy angle confirmed"
+    "reason": "Strategic finance at MENA fintech; **4650048101 404 on Greenhouse EU 2026-06-04**",
+    "next": "Monitor Ziina board for repost; deprioritize unless relisted"
   },
   {
     "dateFound": "2026-05-26",
@@ -157,11 +157,11 @@ const candidates = [
     "location": "São Paulo (hybrid)",
     "source": "Lever",
     "link": "https://jobs.lever.co/dlocal/7cba81c3-4726-498b-8eb3-9ac1106ed51a",
-    "linkStatus": "Live",
+    "linkStatus": "**Stale**",
     "fit": "Medium",
     "decision": "Monitor",
-    "reason": "Payments treasury; strategic finance exposure; not core strategy track",
-    "next": "Only if strategic finance path is priority"
+    "reason": "Payments treasury; **Lever URL 404 + not on dlocal board 2026-06-04**; Corp Dev talent pool Montevideo only",
+    "next": "Re-check Lever monthly; Strategy Manager repost watch"
   },
   {
     "dateFound": "2026-05-26",
@@ -218,6 +218,20 @@ const candidates = [
     "decision": "Monitor",
     "reason": "Partnerships/crypto; senior; strategic commercial",
     "next": "Same as above"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "Circle",
+    "role": "Senior Manager, Partner Management — LATAM",
+    "seniority": "Sr Manager (10+ yrs AM/BD)",
+    "location": "Brazil (remote)",
+    "source": "User inbound (PROMOTE)",
+    "link": "https://careers.circle.com/us/en/job/CIICIRUSJR100929EXTERNALENUS/Senior-Manager-Partner-Management-LATAM",
+    "linkStatus": "**Stale**",
+    "fit": "Very high",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `circle_senior_manager_partner_management_latam_brazil_2026-06-11.md`; score **4.55**; **filled** on official site → Archived watchlist",
+    "next": "Repost watch on crypto rotation"
   },
   {
     "dateFound": "2026-05-26",
@@ -356,8 +370,8 @@ const candidates = [
     "linkStatus": "Live",
     "fit": "High",
     "decision": "Promoted",
-    "reason": "Stage 1 + HR prep — `btg_operations_transformation_inbound_saopaulo_2026-05-26.md`; tracker rank 3",
-    "next": "HR call tent. 2026-06-01; prep + João debrief"
+    "reason": "HR screen **2026-06-08 16:30 BRT** (rescheduled); prep `preparation/btg_operations_transformation/round_01_btg_opstransf_hr_screen_2026-06-08/prep.md`",
+    "next": "João debrief before Mon call"
   },
   {
     "dateFound": "2026-05-26",
@@ -385,7 +399,7 @@ const candidates = [
     "fit": "Medium",
     "decision": "Monitor",
     "reason": "Digital banking product — relevant industry, **not** target role family",
-    "next": "Compare to inbound scope; run §1 only if Manager+ product strategy"
+    "next": "Compare to inbound scope; PROMOTE only if Manager+ product strategy"
   },
   {
     "dateFound": "2026-05-26",
@@ -435,13 +449,13 @@ const candidates = [
     "role": "Gerente de Negócios Cripto",
     "seniority": "Manager",
     "location": "São Paulo",
-    "source": "LinkedIn (PROMOTE inbound)",
+    "source": "LinkedIn + Ivan (MP Banking)",
     "link": "https://www.linkedin.com/jobs/view/4408443201/",
-    "linkStatus": "Aggregator",
+    "linkStatus": "**Stale**",
     "fit": "Very high",
     "decision": "Promoted",
-    "reason": "Stage 1 done — `mercadopago_gerente_negocios_cripto_saopaulo_2026-05-27.md`; tracker rank 3; score 4.40",
-    "next": "Coordinate ML referrer before apply"
+    "reason": "**Posting closed** (Ivan 2026-06-01); career chat **2026-06-06 15:30 BRT**; prep `preparation/mercadopago_ivan_career_2026-06-06/`",
+    "next": "Prep before Fri call"
   },
   {
     "dateFound": "2026-05-27",
@@ -497,7 +511,7 @@ const candidates = [
     "fit": "High",
     "decision": "Monitor",
     "reason": "Target role family + payments network; **Weekday flags may no longer accept; not on careers.pypl.com 2026-05-31**",
-    "next": "Monitor PayPal careers Dubai filter; run §1 if official posting returns"
+    "next": "Monitor PayPal careers Dubai filter; run PROMOTE if official posting returns"
   },
   {
     "dateFound": "2026-05-27",
@@ -525,7 +539,7 @@ const candidates = [
     "fit": "Medium",
     "decision": "Monitor",
     "reason": "B2B acceptance strategy; Director level",
-    "next": "Verify on Mastercard careers before §1"
+    "next": "Verify on Mastercard careers before PROMOTE"
   },
   {
     "dateFound": "2026-05-27",
@@ -540,12 +554,152 @@ const candidates = [
     "decision": "Monitor",
     "reason": "Crypto infra; ex-MBB-style client strategy — Director track",
     "next": "Only if willing to pursue consulting-adjacent Director track"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "J.P. Morgan",
+    "role": "Market and Product Expansion — Treasury (VP)",
+    "seniority": "VP (5+ yrs)",
+    "location": "São Paulo, SP (or Mexico City)",
+    "source": "User inbound (PROMOTE)",
+    "link": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210746060",
+    "linkStatus": "**Live**",
+    "fit": "High",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `jpmorgan_market_product_expansion_treasury_vp_saopaulo_2026-06-11.md`; score **4.15** rank **8**; **preferred JPM SP**",
+    "next": "Hold apply ~post-screen week"
+  },
+  {
+    "dateFound": "2026-06-01",
+    "company": "J.P. Morgan",
+    "role": "LATAM Payments Rails — Product Delivery Manager (VP)",
+    "seniority": "VP (10+ yrs)",
+    "location": "São Paulo, SP",
+    "source": "LinkedIn / Oracle CX",
+    "link": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210741903",
+    "linkStatus": "Live",
+    "fit": "High",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `jpmorgan_..._saopaulo_2026-06-01.md`; score **4.10** rank **9**; second JPM option",
+    "next": "Hold apply ~post-screen week"
+  },
+  {
+    "dateFound": "2026-06-01",
+    "company": "J.P. Morgan",
+    "role": "Payments EMEA Innovation Economy Sales (VP)",
+    "seniority": "VP · Sales",
+    "location": "Dubai, UAE",
+    "source": "LinkedIn / Oracle CX",
+    "link": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210751285",
+    "linkStatus": "Live",
+    "fit": "Low",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `jpmorgan_..._dubai_2026-06-01.md`; score **3.40** rank 10; sales — skip vs SP",
+    "next": "Apply before 2026-06-12 if ever"
+  },
+  {
+    "dateFound": "2026-06-05",
+    "company": "Mercado Pago",
+    "role": "Gerente de Engajamento Pequenas e Médias Empresas",
+    "seniority": "Manager",
+    "location": "São Paulo (hybrid)",
+    "source": "LinkedIn inbound (PROMOTE)",
+    "link": "https://www.linkedin.com/jobs/view/4419607407/",
+    "linkStatus": "Aggregator",
+    "fit": "High",
+    "decision": "Promoted",
+    "reason": "Applied (referral · **Ivan Renner**); **HR inbound** 2026-06-12",
+    "next": "Await HR next step"
+  },
+  {
+    "dateFound": "2026-06-06",
+    "company": "N26",
+    "role": "Strategy & Operations Manager — Acquire",
+    "seniority": "Manager",
+    "location": "Barcelona, Spain",
+    "source": "LinkedIn inbound (PROMOTE · cold apply)",
+    "link": "https://www.linkedin.com/jobs/view/4423069027/",
+    "linkStatus": "Aggregator",
+    "fit": "Very high",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `n26_..._barcelona_2026-06-06.md`; **Rejected no screen** 2026-06-11",
+    "next": "Track closed"
+  },
+  {
+    "dateFound": "2026-06-08",
+    "company": "Revolut",
+    "role": "Operations Manager (Revenue)",
+    "seniority": "Manager",
+    "location": "São Paulo · Madrid · Remote: Brazil · Spain",
+    "source": "Revolut careers (mandatory scan)",
+    "link": "https://www.revolut.com/careers/position/operations-manager-revenue-6970b9e3-e515-4b76-804b-9df9ce31296d/",
+    "linkStatus": "**Live**",
+    "fit": "High",
+    "decision": "Monitor",
+    "reason": "Geo pivot post-Dubai rejection; **Live** 2026-06-12 (403 bypass · en-BR indexed page · Brazil · SP · Madrid · Spain)",
+    "next": "Reply Matt before geo-pivot apply"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "Brex",
+    "role": "Manager, Banking Operations",
+    "seniority": "Manager (2+ yrs people mgr)",
+    "location": "São Paulo (hybrid M/W/Th)",
+    "source": "User inbound (PROMOTE · intel)",
+    "link": "https://www.brex.com/careers/8580566002?gh_jid=8580566002",
+    "linkStatus": "**Live**",
+    "fit": "Low",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `brex_manager_banking_operations_saopaulo_2026-06-11.md`; score **3.35** rank 12; **do not apply** — control ops / comp below floor",
+    "next": "Intel only"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "Tether",
+    "role": "Expansion Manager — Tokenization",
+    "seniority": "Manager (3–5 yrs)",
+    "location": "Brazil · 100% remote",
+    "source": "User inbound (PROMOTE)",
+    "link": "https://careers.tether.io/o/expansion-manager-tokenization-100-remote-6",
+    "linkStatus": "**Live**",
+    "fit": "High",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `tether_expansion_manager_tokenization_remote_brazil_2026-06-11.md`; score **4.20** rank **8**; Hadron RWA · hold BTG",
+    "next": "No AI on apply"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "Amazon",
+    "role": "Sr Program Manager — Payment Business Operation LATAM",
+    "seniority": "Sr Program Manager",
+    "location": "São Paulo, SP",
+    "source": "User inbound (PROMOTE)",
+    "link": "https://www.amazon.jobs/en/jobs/10404183/sr-program-manager-payment-business-operation-latam",
+    "linkStatus": "**Live**",
+    "fit": "High",
+    "decision": "Promoted",
+    "reason": "Applied **2026-06-12**; referral **Corrado Atzerri** in",
+    "next": "Monitor applicant portal"
+  },
+  {
+    "dateFound": "2026-06-11",
+    "company": "Amazon",
+    "role": "Pricing & Payments Manager — Partner Strategy & Experience",
+    "seniority": "Manager (people mgr)",
+    "location": "Osasco SP · Rio RJ",
+    "source": "User inbound (PROMOTE · intel)",
+    "link": "https://www.amazon.jobs/en/jobs/10408004/pricing-payments-manager-partner-strategy-experience",
+    "linkStatus": "**Live**",
+    "fit": "Low",
+    "decision": "Promoted",
+    "reason": "Stage 1 — `amazon_pricing_payments_manager_partner_strategy_brazil_2026-06-11.md`; score **3.40** rank **14**; Last Mile — **do not apply**",
+    "next": "Skip vs 10404183"
   }
 ] as Candidate[];
 
 const top3Notes = [
-  "Mercado Pago — Gerente de Online Payments (`Aggregator` → confirm on careers-meli)",
-  "Ziina — FP&A Manager (`Live` → validate strategic finance vs pure FP&A scope)",
+  "Revolut — Operations Manager (Revenue) Brazil/Spain (`Live` → reply Matt before geo-pivot PROMOTE)",
+  "Mercado Pago — Gerente de Online Payments (`Aggregator` → no Gerente on Eightfold; LinkedIn 4206073378)",
   "EBANX — Product Senior Manager \\| Payments SP (`Live` → only if product strategy track intentional)"
 ] as string[];
 
@@ -569,10 +723,10 @@ const inPipeline = candidates.filter(
 const monitor = candidates.filter((c) => c.decision === 'Monitor');
 const needInfo = candidates.filter((c) => c.decision === 'Need more info');
 
-const decisionCounts = [{"label":"Process now","value":0},{"label":"Promoted","value":4},{"label":"Already processed","value":3},{"label":"Monitor","value":16},{"label":"Need more info","value":2},{"label":"Ignore","value":10}];
+const decisionCounts = [{"label":"Process now","value":0},{"label":"Promoted","value":14},{"label":"Already processed","value":3},{"label":"Monitor","value":17},{"label":"Need more info","value":2},{"label":"Ignore","value":10}];
 
-const dubaiCount = 18;
-const spCount = 15;
+const dubaiCount = 19;
+const spCount = 25;
 const otherCount = 3;
 
 const linkStatusTone = (s: string): 'success' | 'warning' | 'neutral' | 'deleted' => {
@@ -635,7 +789,7 @@ export default function OpportunitiesTracker() {
 
       <Stack gap={10}>
         <H2>Process now — PROMOTE next</H2>
-        <Text tone="secondary" size="small">Strong enough for PROMOTE → §1 · Not yet in Career/Applications/</Text>
+        <Text tone="secondary" size="small">Strong enough for PROMOTE · Not yet in Career/Applications/</Text>
         {processNow.length === 0 ? (
           <Callout tone="warning" title="No Process now rows">
             <Text size="small">Weekly Top 3 queue lives in source file. Set Process now when Link status is Live and ready for PROMOTE.</Text>

@@ -316,7 +316,7 @@ export default function OpportunitiesTracker() {
 
       <Stack gap={10}>
         <H2>Process now — PROMOTE next</H2>
-        <Text tone="secondary" size="small">Strong enough for PROMOTE → §1 · Not yet in Career/Applications/</Text>
+        <Text tone="secondary" size="small">Strong enough for PROMOTE · Not yet in Career/Applications/</Text>
         {processNow.length === 0 ? (
           <Callout tone="warning" title="No Process now rows">
             <Text size="small">Weekly Top 3 queue lives in source file. Set Process now when Link status is Live and ready for PROMOTE.</Text>

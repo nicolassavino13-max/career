@@ -1,6 +1,6 @@
 # About Me
 
-> Job search agents: also read `Career/search_context/career_positioning.md` and `Career/applications_tracker.md`. Start: `Career/JOB_SEARCH.md`.
+> Job search agents: also read `Career/search_context/career_positioning.md` and `Career/applications_tracker.md`. Start: `Career/JOB_SEARCH.md` (full OS architecture).
 
 Name: Nicolas Savino
 

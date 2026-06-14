@@ -1,6 +1,6 @@
 # BTG Pactual — Operations Transformation (inbound pipeline) — São Paulo
 
-> **Stage 1 + HR prep** — Inbound HR lead (no public JD yet). HR screening **confirmed 2026-06-01 16:30**. Scoring: `Career/search_context/role_scorecard.md`. Tracker: `applications_tracker.md`.
+> **Stage 3 — stakeholder round pending** — HM Tulio **complete 2026-06-10** (no formal feedback yet; referrals requested · LinkedIn activity). **Active prep:** `preparation/btg_operations_transformation/round_03_btg_opstransf_stakeholder_pending/prep.md`. **Process log:** `preparation/btg_operations_transformation/process_log.md`. Tracker: `applications_tracker.md`.
 
 ---
 
@@ -19,12 +19,12 @@
 | Recruiter | Ana Clara — HR Banco BTG |
 | Compensation | Not disclosed — validate on call; BTG typically competitive at manager+ |
 | Date discovered | 2026-05-26 |
-| Status | Interviewing (HR screen · 2026-06-01) |
+| Status | Interviewing (awaiting Round 3 · Tulio HM complete 2026-06-10) |
 | Weighted score | 3.70 / 5.00 |
 | Score band | Worth applying if effort is reasonable (3.5–3.9) |
 | Decision rank | 4 |
 | Priority rationale | Rank above Nubank/Adyen on **action urgency**: warm HR + referral beats cold mapped roles; score below Visa/ML/Revolut due to traditional-bank / fintech-narrative tradeoff |
-| Final recommendation | **Prep HR screen (2026-06-01 16:30)** — qualify Operations transformation roles, seniority, comp, and strategic vs back-office scope; debrief João before call; promote to full Stage 2 only if Manager+ transformation confirmed |
+| Final recommendation | **Prep Round 3 (stakeholder / referrals TBD)** — lock title/level (Gerente+), LIAM/onboarding/IA scope, comp; be upfront on likes/dislikes (Tulio coaching); warm follow-up with Ana Clara while awaiting schedule |
 
 ---
 
@@ -163,11 +163,13 @@ McKinsey FS associate with **payments and operational transformation** (acquirer
 
 | Action | Owner | Due | Status |
 |---|---|---|---|
-| Confirm call slot with Ana Clara (target **2026-06-01**) | Nicolas | 2026-05-28 | In progress |
-| Ask João: which team/role he referred; insider context | Nicolas | Before call | Pending |
-| HR screening prep (see Stage 2 below) | Nicolas | 2026-05-31 | Pending |
-| Scan carreiras.btgpactual.com for matching “transformação” / “operações” SP postings | Nicolas | 2026-05-30 | Pending |
-| After call: update scores with exact JD; rescope or withdraw | Agent/Nicolas | 2026-06-02 | Pending |
+| Confirm call slot with Ana Clara | Nicolas | 2026-05-28 | **Done** |
+| HR screening (Ana Clara) | Nicolas | 2026-06-08 | **Done** — advanced to Tulio |
+| HR post_call → `round_01_.../post_call.md` | Agent | 2026-06-08 | **Done** |
+| HM prep → `round_02_btg_opstransf_hm_tulio_2026-06-10/prep.md` | Agent | 2026-06-08 | **Ready** |
+| Ask João: which team/role he referred; insider context | Nicolas | Before **2026-06-10** | Pending |
+| Tulio Prado HM interview | Nicolas | **2026-06-10 14:00 BRT** | **Upcoming** |
+| After Tulio: post_call + rescope scores / withdraw if downgrade | Agent/Nicolas | **2026-06-10** (same day) | Pending |
 
 ---
 
@@ -191,13 +193,20 @@ BTG strengthens **LatAm finance operator** credibility and compensation optional
 |---|---|
 | 2026-05-26 | Stage 1 created from Ana Clara WhatsApp inbound + discovery scan |
 | 2026-05-27 | HR screening scheduling — tentative **2026-06-01**; Stage 2 HR prep added |
-| 2026-05-27 | Call **confirmed** with Ana Clara — **2026-06-01 16:30** (Operations transformation roles) |
+| 2026-05-27 | Call **confirmed** with Ana Clara — **2026-06-01 16:30 BRT** (Operations transformation roles) |
+| 2026-06-01 | Prep folder created; HR screen originally **2026-06-01 16:30 BRT**. |
+| 2026-06-01 | **Postponed** — Ana Clara HR conflict → **2026-06-08 16:30 BRT** (Mon). Prep folder → `round_01_..._2026-06-08`. |
+| 2026-06-08 | **HR screen complete** (Ana Clara). Scope: ops transformation at scale (~700 FTE), LIAM, AI/workflows, onboarding. Advanced to **Tulio Prado** **2026-06-10 14:00 BRT**. `round_01/post_call.md` + `round_02` prep. |
 
 ---
 
-# Stage 2 — HR screening prep (2026-06-01 16:30)
+# Stage 2 — HR screening prep (2026-06-08 16:30 BRT)
 
-> Discovery call with Ana Clara (HR), not hiring manager. Goal: **qualify** fit and process — do not pitch for 30 minutes. **Confirmed:** 1/6 às 16:30 — vagas de Operations / transformação.
+> **Execution prep (canonical):** `preparation/btg_operations_transformation/round_01_btg_opstransf_hr_screen_2026-06-08/prep.md` · **Process log:** `preparation/btg_operations_transformation/process_log.md`
+>
+> Section below = historical reference from pre–Job Advancement workflow. Do not extend interview checklists here — use **ADVANCE** for new rounds.
+
+> Discovery call with Ana Clara (HR), not hiring manager. Goal: **qualify** fit and process — do not pitch for 30 minutes. **Confirmed:** 1/6 às 16:30 **BRT (Rio)** — vagas de Operations / transformação.
 
 ## Call objectives
 
@@ -278,7 +287,7 @@ Capture: team name, seniority he had in mind, culture, comp rumors, who decides.
 | 2026-05-29 | João debrief logged in Notes below |
 | 2026-05-30 | 20 min on carreiras.btgpactual.com — filter Operações / Transformação / Produtos digitais |
 | 2026-05-31 | Re-read this section + `career_positioning.md`; quiet room, LinkedIn open |
-| **2026-06-01 16:30** | Call — take notes in real time (titles, HM, comp, next step) |
+| **2026-06-01 16:30 BRT** | Call — take notes in real time (titles, HM, comp, next step) |
 
 ## Post-call (same day)
 

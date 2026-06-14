@@ -1,0 +1,28 @@
+---
+description: PowerPoint deck build — BUILD_DECK loads ppt-com + ppt-template-builder (Windows COM)
+globs: "**/*.{pptx,ppt}"
+alwaysApply: false
+---
+
+# PowerPoint Deck OS
+
+When the user says **`BUILD_DECK`**, wants to **build / edit / open a deck**, or works on **`.pptx`** in this workspace:
+
+1. **Read first (mandatory):**
+   - `~/.cursor/skills/ppt-consulting/SKILL.md` (storyline + action ledes — net-new decks)
+   - `~/.cursor/skills/ppt-com/SKILL.md`
+   - `~/.cursor/skills/ppt-template-builder/SKILL.md` (if rebuilding or matching a template slide)
+2. **Follow:** `AI/snippets/BUILD_DECK.md`
+3. **Runtime:** Windows only — use `py -c` or `py script.py`, not `python`
+4. **Connect** to already-running PowerPoint (`GetActiveObject`) unless user gives a file path to open
+5. **Ask once:** working folder for exports/scripts (default `C:\temp\ppt_rebuild` if user has no preference)
+6. **Never** `ppt.Quit()`, delete slides, or delete shapes without explicit permission
+7. **Model:** **Auto** per `AI/cursor_model_usage.md` (COM scripts and layout iteration)
+
+**Quick edits** (one slide, text swap): `ppt-com` only.
+
+**Rebuild / template match** (recreate slide, layout parity): `ppt-com` + `ppt-template-builder` + `reference.md`.
+
+**Tables:** `~/.cursor/skills/ppt-com/references/ppt-table.md`.
+
+After user approves a rebuilt slide, save sanitized script under `ppt-template-builder/scripts/`.

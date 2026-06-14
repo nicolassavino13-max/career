@@ -8,17 +8,21 @@ alwaysApply: false
 
 When the user shares a **job description, role, or careers URL** for evaluation:
 
-1. Follow `Career/JOB_SEARCH.md` and `AI/prompt_library.md` **§1**.
+1. Follow **`AI/snippets/PROMOTE.md`** + **`AI/job_search_workflow.md`** (not a separate §1 path).
 2. **Read:** `Career/search_context/master_context.md`, `Career/search_context/career_positioning.md`, `Career/search_context/role_scorecard.md`, `Career/applications_tracker.md`.
 3. **Duplicate check:** `Career/applications_tracker.md` + `Career/opportunities_tracker.md` — if company+role exists, stop and point to existing file.
-4. **Write:** Stage 1 opportunity file + update `Career/applications_tracker.md` (Pipeline Summary, Open Items, Update Log only). Canvas auto-syncs via `AI/.cursor/hooks/sync_pipeline_canvas.mjs` on save — no manual canvas edit unless hook failed (`node AI/.cursor/hooks/sync_pipeline_canvas.mjs --force`).
-5. **Discovery backfill:** if §1 ran without a discovery row, add one with Decision **`Promoted`** after tracker write.
+4. **Write:** Stage 1 opportunity file + update `Career/applications_tracker.md` (Pipeline Summary, Open Items, Update Log only). Canvas auto-syncs via `AI/.cursor/hooks/sync_pipeline_canvas.mjs` on save.
+5. **Discovery backfill:** if PROMOTE ran without a discovery row, add one with Decision **`Promoted`** after tracker write.
 6. **Do not** put pipeline status in `career_goals.md` or `target_companies.md`.
 7. **Do not** load full `career_goals.md` unless user asks for deep positioning.
 8. Default model: **Auto** per `AI/cursor_model_usage.md`.
 
-**PROMOTE** (discovery → applications): user says `PROMOTE [Company]` or `PROMOTE: [Company] — [Role]` → follow `AI/snippets/PROMOTE.md` then §1 (no @-mentions required).
+**PROMOTE** (Stage 1 — all paths): user says `PROMOTE` + company/role **or** pastes JD/URL → follow `AI/snippets/PROMOTE.md` + `AI/job_search_workflow.md`. Path A: from discovery row. Path B: inbound/research with pasted JD.
 
-**RUN_DISCOVERY** (daily scan): user says `RUN_DISCOVERY` or "run discovery" → follow `AI/snippets/RUN_DISCOVERY.md` + `AI/job_discovery_workflow.md`; update `Career/opportunities_tracker.md` + opportunities canvas only (no §1, no applications tracker).
+**RUN_DISCOVERY** (daily scan): user says `RUN_DISCOVERY` → run `python AI/.cursor/hooks/verify_discovery_links.py` first → follow `AI/snippets/RUN_DISCOVERY.md` + `AI/job_discovery_workflow.md`; opportunities tracker only. Reply must include **Companies Checked Report** + **link verification pass**. Do not close with unresolved `Unknown` on mandatory/pipeline rows.
 
-Active role → Prompt **§4** (Stage 2). Weekly review → Prompt **§7**.
+**ADVANCE** (next-round prep): `ADVANCE` + company/role + context → `AI/snippets/ADVANCE.md`.
+
+**UPDATE** (status sync): `UPDATE` + company/role + new info → `AI/snippets/UPDATE.md`.
+
+Apply assets (CV, outreach) → Prompt **§4**. Interview rounds → **ADVANCE**. Live changes → **UPDATE**. Weekly review → **§7**.

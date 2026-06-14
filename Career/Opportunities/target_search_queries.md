@@ -8,7 +8,7 @@ This file feeds the Job Discovery Workflow.
 
 Use these queries manually first. Later, selected queries may become semi-automated or automated.
 
-Primary geographies are **Dubai / UAE** and **São Paulo / Brazil**, with equal priority.
+Primary geographies: **São Paulo / Brazil (75%)** · **Dubai / UAE (25%)** — discovery rotation weighted SP-first (2026-06-10).
 
 Do not use compensation as a discovery filter.
 
@@ -224,8 +224,15 @@ Coordinator
 ```text
 Revolut "Strategy & Operations" Dubai
 Revolut "Strategy & Operations" Brazil
+Revolut "Strategy & Operations" Spain
+Revolut "Strategy & Operations" Madrid
 Revolut "Revenue" "Strategy" Dubai
+Revolut "Revenue" "Strategy" Brazil
+Revolut "Revenue" "Strategy" Spain
+Revolut "Operations Manager" Revenue São Paulo
+Revolut "Operations Manager" Revenue Madrid
 Revolut "Business Operations" São Paulo
+Revolut "Business Operations" Spain
 
 Stripe "Strategy" Dubai
 Stripe "Business Operations" Dubai
@@ -277,7 +284,16 @@ Mastercard "Fintech" Dubai
 Amazon Pay "Business Development Manager" Dubai
 Amazon Pay "Strategy" São Paulo
 Amazon "Payments" "Strategy Manager" Brazil
+Amazon "Business Operations" São Paulo
+Amazon "Business Operations" Osasco
+Amazon "Partner Strategy" Brazil
+Amazon "Product Strategy" Brazil
 Amazon "Fintech" "Business Operations" Dubai
+
+# Exclude on discovery — logistics false positives (title says Payments but scope is Last Mile)
+# Amazon "Last Mile" Brazil
+# Amazon "Logistics" "Pricing" Brazil
+# Amazon "EDSP" OR "AMPL" OR "AMXL"
 
 Google Payments "Strategy" São Paulo
 Google Payments "Partnerships" Brazil
@@ -328,44 +344,61 @@ dLocal "Business Operations" Dubai
 dLocal "Partnerships" Brazil
 ```
 
-## Crypto / Stablecoin Infrastructure
+## Crypto / Stablecoin Infrastructure (SP + Remote primary · Dubai secondary)
 
 ```text
+# São Paulo / Brazil office
+Brex "Strategy" São Paulo
+Brex "Business Operations" Brazil
+Brex "Corporate Development" São Paulo
+Coinbase "Strategy" Brazil
+Coinbase "Business Operations" Brazil
+Coinbase "Corporate Development" São Paulo
+Circle "Partnerships" Brazil
+Circle "Strategy" Brazil
+Fireblocks "Strategy" São Paulo
+Fireblocks "Business Operations" Brazil
+Kraken "Strategy" Brazil
+Kraken "Partnerships" Brazil
+Binance "Strategy" Brazil
+
+# Remote (Brazil · Americas · global)
+Brex "Strategy" remote
+Coinbase "Strategy" remote
+Coinbase "Corporate Development" remote
+Coinbase "Business Operations" remote
+Circle "Strategy" remote
+Circle "Stablecoin" "Strategy" remote
+Circle "Business Operations" remote
+Tether "Strategy" remote
+Tether "Expansion" Brazil
+Kraken "Strategy" remote
+Kraken "Business Operations" remote
+Binance "Strategy" remote
+Binance "Business Operations" remote
+Paxos "Strategy" remote
+Gemini "Strategy" remote
+OKX "Strategy" remote
+Bybit "Strategy" remote
+
+# Dubai / UAE (secondary — after SP + remote pass)
 Circle "Strategy" Dubai
 Circle "Business Operations" UAE
 Circle "Stablecoin" "Strategy" Dubai
-Circle "Partnerships" Brazil
-
-Tether "Strategy" remote
-Tether "Strategy" Dubai
-Tether "Business Operations" UAE
-Tether "Expansion" Brazil
-
-Coinbase "Strategy" Brazil
-Coinbase "Business Operations" Brazil
-Coinbase "Corporate Development" remote
 Coinbase "International Expansion" Dubai
-
-Kraken "Strategy" Dubai
-Kraken "Business Operations" UAE
-Kraken "Partnerships" Brazil
-
 Ripple "Strategy" Dubai
 Ripple "Partnerships" UAE
 Ripple "Payments Strategy" Dubai
-
 Fireblocks "Strategy" Dubai
 Fireblocks "Business Operations" UAE
-Fireblocks "Partnerships" Brazil
-
 Chainalysis "Strategy" Dubai
 Chainalysis "Business Operations" UAE
-Chainalysis "Partnerships" Brazil
-
 Binance "Strategy" Dubai
 Binance "Business Operations" UAE
 Bybit "Strategy" UAE
 OKX "Strategy" Dubai
+Tether "Strategy" Dubai
+Tether "Business Operations" UAE
 ```
 
 ---
@@ -469,7 +502,7 @@ Use 3–5 priority queries, rotating between:
 - Corporate Development
 - Strategic Partnerships / Alliances
 
-**Non-rotational — always include in every daily scan:** Nubank · Checkout.com · Adyen (see sections below).
+**Non-rotational — always include in every daily scan:** Nubank · Checkout.com · Adyen · Revolut (see sections below).
 
 ---
 
@@ -631,6 +664,298 @@ site:greenhouse.io/adyen "Strategy" "Sao Paulo"
 
 - Add discovery row · Link status `Live`
 - Flag for PROMOTE or update existing Stage 1 file
+
+---
+
+# Revolut — mandatory daily scan
+
+> Run on **every** RUN_DISCOVERY. Dubai S&O Revenue **rejected post-screen 2026-06-06** — mandatory pass watches **Brazil · Spain** geo pivot for same role family.
+
+## Primary source (canonical)
+
+```text
+https://www.revolut.com/careers
+https://www.revolut.com/en-BR/careers
+```
+
+## Known postings to verify each scan
+
+```text
+Strategy & Operations Manager — e4b7c063-41c5-4afc-8031-2323db04b9f7
+https://www.revolut.com/careers/position/strategy-operations-manager-e4b7c063-41c5-4afc-8031-2323db04b9f7/
+https://www.revolut.com/en-BR/careers/position/strategy-operations-manager-e4b7c063-41c5-4afc-8031-2323db04b9f7/
+
+Operations Manager (Revenue) — 6970b9e3-e515-4b76-804b-9df9ce31296d
+https://www.revolut.com/careers/position/operations-manager-revenue-6970b9e3-e515-4b76-804b-9df9ce31296d/
+```
+
+## Title filters (Brazil · Spain — mandatory pass)
+
+```text
+"Strategy & Operations"
+"Strategy and Operations"
+"Operations Manager" + "Revenue"
+"Revenue Operations"
+"Business Operations"
+"BizOps"
+```
+
+## Location filters (mandatory pass)
+
+```text
+Remote: Brazil
+Office: São Paulo
+Remote: Spain
+Office: Madrid
+Office: Barcelona
+```
+
+## Company-specific queries (aggregators only — confirm on revolut.com/careers)
+
+```text
+Revolut "Strategy & Operations" Brazil
+Revolut "Strategy & Operations" Spain
+Revolut "Strategy & Operations" Madrid
+Revolut "Operations Manager" Revenue São Paulo
+Revolut "Operations Manager" Revenue Madrid
+site:revolut.com/careers Brazil "Strategy & Operations"
+site:revolut.com/careers Spain "Strategy & Operations"
+```
+
+## Exclude (unless exceptional scope)
+
+```text
+Sales Manager
+Account Executive
+Customer Support
+Compliance-only
+Analyst / Associate (below Manager band)
+```
+
+## When Brazil or Spain S&O/Revenue is live
+
+- Add discovery row · Link status `Live` · location = Brazil or Spain explicitly
+- Flag in chat — geo pivot from rejected Dubai track (`revolut_strategy_operations_manager_dubai_2026-05-25.md`)
+- **Before reapply:** coordinate with Matt (recruiter) if same global job ID — avoid duplicate ATS without recruiter OK
+- PROMOTE may create geo-specific Stage 1 file (e.g. `revolut_strategy_operations_manager_brazil_YYYY-MM-DD.md`)
+
+## When no Brazil/Spain match
+
+- Log in Weekly Discovery Notes: *"Revolut scan: no S&O/Revenue Brazil or Spain"*
+- Do not remove Dubai rejected application row
+
+---
+
+# Crypto / Stablecoin — weekly rotation (SP + Remote)
+
+> **Not mandatory daily.** Pick **1–2 companies per RUN_DISCOVERY** from this cluster when a rotation slot is open. Full workflow: `AI/job_discovery_workflow.md` → **Weekly Rotation: Crypto / Stablecoin + Brex**.
+
+## Rotation roster
+
+Brex · Coinbase · Circle · Binance · Kraken · Fireblocks · Ripple · Tether · OKX · Bybit · Paxos · Gemini
+
+**Geo priority:** São Paulo / Brazil office → Remote (Brazil · Americas · global) → Dubai/MENA (secondary).
+
+## Brex — rotation scan
+
+### Primary source (canonical)
+
+```text
+https://boards-api.greenhouse.io/v1/boards/brex/jobs?content=true
+https://job-boards.greenhouse.io/brex
+https://www.brex.com/careers
+```
+
+### Known SP posting (re-verify each rotation pass)
+
+```text
+Manager, Banking Operations — job 8580566002 — São Paulo
+https://www.brex.com/careers/8580566002?gh_jid=8580566002
+```
+
+- PROMOTED 2026-06-11 — intel only · score 3.35 · do not apply (control ops).
+- Watch for **Strategy / BizOps / Partnerships** SP titles — PROMOTE if live.
+
+### Title filters (SP + remote)
+
+```text
+"Strategy" · "Strategy & Operations" · "Business Operations" · "BizOps"
+"Corporate Development" · "Partnerships" · "Alliances" · "Payments Strategy"
+"Chief of Staff" · "Commercial Strategy"
+```
+
+### Exclude
+
+```text
+Banking Operations monitoring / transaction monitoring (intel only unless pivot)
+Data / Engineering · Intern / Rotational · pure Compliance
+```
+
+## Coinbase — rotation scan
+
+```text
+https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true
+https://job-boards.greenhouse.io/coinbase
+```
+
+Filter: Remote global + Brazil/São Paulo when listed. Title filters same as Brex block.
+
+## Circle — rotation scan
+
+```text
+https://www.careers.circle.com
+```
+
+Greenhouse board `circle` may 404 on US API — use careers site HTML or aggregators (Built In · Web3.career) → confirm on official site before PROMOTE.
+
+Existing discovery rows: VP Regional Strategy MEA · Director Partner Management MEA — Monitor unless inbound.
+
+## Binance — rotation scan
+
+```text
+https://www.binance.com/en/careers
+```
+
+Often remote-global; filter Strategy / BizOps / Corp Dev / Partnerships. Binance Greenhouse board returns empty — use careers portal.
+
+## Kraken — rotation scan
+
+```text
+https://jobs.lever.co/kraken
+https://api.lever.co/v0/postings/kraken?mode=json
+```
+
+## Fireblocks — rotation scan
+
+```text
+https://boards-api.greenhouse.io/v1/boards/fireblocks/jobs?content=true
+https://www.fireblocks.com/careers
+```
+
+SP signal: Sales Director Brazil (commercial — penalize unless strategic partnerships scope). Dubai MENA strategy rows on aggregators — confirm official.
+
+## Ripple · Tether · OKX · Bybit · Paxos · Gemini
+
+- **Ripple:** ripple.com/careers — Dubai MEA filter + remote
+- **Tether / OKX / Bybit:** official careers · often aggregator-only
+- **Paxos / Gemini:** Greenhouse or Lever — remote Strategy / Corp Dev
+
+## When crypto target role found
+
+- Add discovery row · Link status `Live` · Decision `Process now` or `Monitor`
+- Flag in chat — crypto Strategy/S&O postings are rare and time-sensitive
+
+## When no match
+
+- Log one line in Weekly Discovery Notes (company | SP | outcome)
+- Update Parking Lot if company-level no-role signal
+
+---
+
+# Big Tech — weekly rotation (São Paulo / Brazil)
+
+> **Not mandatory daily.** Pick **1 company per RUN_DISCOVERY** when rotation slot open. Full workflow: `AI/job_discovery_workflow.md` → **Weekly Rotation: Big Tech SP**.
+
+## Rotation roster
+
+Amazon · Google · Meta · Apple · Microsoft (+ Stripe SP already in fintech rotation)
+
+**Geo:** São Paulo · Osasco · Rio · Brazil filter on official careers.
+
+## Amazon — rotation scan
+
+```text
+https://www.amazon.jobs/en/search?base_query=&loc_query=Brazil
+https://www.amazon.jobs/en/search?base_query=payments&loc_query=São Paulo
+https://www.amazon.jobs/en/search?base_query=strategy&loc_query=Osasco
+```
+
+**Include:** Payments Strategy · BizOps · Partner Strategy (platform) · Amazon Pay · Product Strategy · deal/pricing strategy with business ownership.
+
+**Exclude / intel only:** Last Mile · Logistics · Fulfillment · EDSP/AMPL/AMXL partner ops — ref job **10408004** (score 3.40 · do not apply).
+
+## Google · Meta · Apple · Microsoft
+
+```text
+site:careers.google.com Brazil "Strategy" payments
+site:metacareers.com Brazil "Partnerships" OR "Business Operations"
+site:jobs.apple.com Brazil strategy
+site:careers.microsoft.com Brazil "Strategy" payments
+```
+
+Filter: Manager / Senior Manager · target role families. Exclude ads sales AE, logistics, warehouse ops.
+
+## When big-tech target role found
+
+- Discovery row · Link status `Live` · flag in chat — big-tech SP strategy postings are rare.
+
+---
+
+# Link verification registry — mandatory every RUN_DISCOVERY
+
+> **Run first:** `python AI/.cursor/hooks/verify_discovery_links.py`  
+> Script implements this table. Agent must resolve any `Unknown`/`Blocked` via fallbacks before closing scan.
+
+## Script-covered checks (every run)
+
+| ID | Company | Role / check | Geo | Primary API / URL | Fallback chain |
+|---|---|---|---|---|---|
+| nubank-target | Nubank | SPG / Corp Dev / S&O SP | SP | `boards-api.greenhouse.io/v1/boards/nubank/jobs` | GH board browse |
+| watch-nubank-spg | Nubank | SPG repost 7577975 | SP | Greenhouse job ID lookup | — |
+| checkout-revops | Checkout.com | RevOps / Commercial Strategy Dubai | Dubai | `ashby-careers-checkout-production.up.railway.app/api/jobs` | checkout.com/jobs |
+| adyen-7913587 | Adyen | Senior Alliances Partner Manager | SP | Greenhouse job 7913587 | job-boards.greenhouse.io/adyen |
+| revolut-som | Revolut | S&O Manager Revenue `e4b7c063` | Both | en-BR + global careers URL | **WebFetch** · manual confirm |
+| revolut-omr | Revolut | OMR `6970b9e3` | Both | en-BR + global careers URL | **WebFetch** · manual confirm |
+| visa-ref082130w | Visa | SM Product Strategy REF082130W | Dubai | Workday CXS JSON (see below) | Workday HTML |
+| meli-online-payments | Mercado Pago | Gerente Online Payments | SP | Eightfold search | LinkedIn **4206073378** |
+| meli-sme-engagement | Mercado Pago | Gerente Engajamento SME | SP | Eightfold search | LinkedIn **4419607407** |
+| ebanx-7718387003 | EBANX | Product Sr Manager Payments | SP | Greenhouse 7718387003 | — |
+| jpm-210741903 | J.P. Morgan | LATAM Payments Rails Delivery VP | SP | Oracle REST (see below) | Oracle CX UI |
+| jpm-210746060 | J.P. Morgan | Market & Product Expansion Treasury VP | SP | Oracle REST | Oracle CX UI |
+| jpm-210751285 | J.P. Morgan | Innovation Economy Sales VP | Dubai | Oracle REST | Oracle CX UI |
+| brex-8580566002 | Brex | Manager, Banking Operations (intel) | SP | Greenhouse job 8580566002 | brex.com/careers |
+
+## Rotation checks (not in script — agent on crypto rotation pass)
+
+| ID | Company | Role / check | Geo | Primary API / URL |
+|---|---|---|---|---|
+| brex-strategy-sp | Brex | Strategy / S&O / BizOps SP or remote | SP | Greenhouse `brex` filter |
+| coinbase-strategy | Coinbase | Strategy / Corp Dev remote | SP | Greenhouse `coinbase` filter |
+| circle-careers | Circle | Strategy / Partnerships | SP/remote | careers.circle.com |
+| binance-careers | Binance | Strategy / BizOps remote | SP | binance.com/en/careers |
+
+## Canonical API URLs
+
+```text
+# Visa Workday (prefer CXS JSON over HTML)
+https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/job/AE---Dubai-United-Arab-Emirates/Senior-Manager--Product-Strategy-and-Planning_REF082130W
+
+# Mercado Libre / Mercado Pago (Eightfold — not legacy careers-meli 404 paths)
+https://mercadolibre.eightfold.ai/api/pcsx/search?domain=mercadolibre.com&query=Gerente+Online+Payments&start=0
+https://careers-meli.mercadolibre.com/pt/jobs
+
+# J.P. Morgan Oracle
+https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=210741903,siteNumber=CX_1001
+
+# Revolut (403 on curl — use WebFetch in agent)
+https://www.revolut.com/en-BR/careers/position/strategy-operations-manager-e4b7c063-41c5-4afc-8031-2323db04b9f7/
+https://www.revolut.com/careers/position/operations-manager-revenue-6970b9e3-e515-4b76-804b-9df9ce31296d/
+```
+
+## Also verify from tracker (rotation + Top 3)
+
+Each run: read `opportunities_tracker.md` **Top 3** + all rows with `Link status` = Live or Aggregator and Decision ≠ Promoted/Ignore. Add to Companies Checked Report if not in script table.
+
+## When primary source fails
+
+| Symptom | Action |
+|---|---|
+| HTTP 403 | WebFetch · JSON API alternative · web search `site:official-careers title` |
+| HTTP 404 on careers URL | Check registry for current ATS (Eightfold, CXS, Greenhouse API) |
+| Empty / JS-only page | Use board API (Greenhouse, Ashby, Lever, Workday CXS, Oracle REST) |
+| LinkedIn-only | Eightfold confirm → keep `Aggregator` until official ATS match |
+
+**Never close RUN_DISCOVERY with unresolved `Unknown` on pipeline or mandatory rows.**
 
 ---
 

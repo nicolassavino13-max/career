@@ -1,6 +1,23 @@
 # Prompt Library
 
-> Entry point: `Career/JOB_SEARCH.md` · Runbook: `AI/job_search_workflow.md` · Snippets: `AI/snippets/` · Canvases: `AI/canvases/` · Cursor config: `AI/.cursor/`
+> Entry point: `Career/JOB_SEARCH.md` · Runbooks: `AI/job_discovery_workflow.md` · `AI/job_search_workflow.md` · `AI/job_advancement_workflow.md` · Snippets: `AI/snippets/` (RUN_DISCOVERY · **PROMOTE** · UPDATE · ADVANCE · **BUILD_DECK**) · Canvases: `AI/canvases/` · Cursor config: `AI/.cursor/`
+
+---
+
+## BUILD_DECK — PowerPoint build / edit (Windows)
+
+**Snippet file:** `AI/snippets/BUILD_DECK.md` · **Skills:** `ppt-consulting` (storyline) · `ppt-com` · `ppt-template-builder` (rebuilds)
+
+```text
+BUILD_DECK
+
+@AI/snippets/BUILD_DECK.md
+
+Deck: [active | path]
+Goal: [edit slide N | rebuild | new table | ...]
+```
+
+Agent: read skills → connect to PowerPoint → execute → `pres.Save()` → summarize changes. Rule: `AI/.cursor/rules/ppt-deck.mdc`.
 
 ---
 
@@ -14,91 +31,69 @@ Opportunities layer only — update `Career/opportunities_tracker.md` + **opport
 RUN_DISCOVERY  →  opportunities_tracker.md  →  discovery canvas
 ```
 
-Agent: read context → scan Dubai/UAE + São Paulo/Brazil → pre-screen → append new rows → flag stale/uncertain → sync discovery canvas → reply with summary. Do **not** run §1 or PROMOTE.
+Agent: read context → scan Dubai/UAE + São Paulo/Brazil → pre-screen → append new rows → flag stale/uncertain → sync discovery canvas → reply with **Companies Checked Report** (Company · **Geo checked** Dubai|SP|Both · Source · Outcome; dual-presence → Both) + geo coverage summary. Do **not** run PROMOTE.
 
 ---
 
-## PROMOTE — Discovery → Applications
+## PROMOTE — Stage 1 (all paths into pipeline)
 
-**Snippet file:** `AI/snippets/PROMOTE.md`
+**Snippet file:** `AI/snippets/PROMOTE.md` · Runbook: `AI/job_search_workflow.md`
 
-Promote one row from `Career/opportunities_tracker.md` into the funnel by running **§1** below.
+**The only command to score a role and enter the pipeline.** Replaces the old separate §1 invoke.
 
+**Path A — from discovery:**
 ```text
 PROMOTE: [Company] — [Role]
-
-@AI/snippets/PROMOTE.md
-@AI/prompt_library.md §1
 ```
 
-Agent: find row → fetch JD from link → run §1 → mark discovery row `Promoted` → reply with score, rank, recommendation.
+**Path B — inbound / own research (paste JD):**
+```text
+PROMOTE
+
+@AI/snippets/PROMOTE.md
+
+[Paste JD or URL + context]
+```
+
+Agent: run `AI/job_search_workflow.md` → Stage 1 file + `applications_tracker.md` → mark or backfill discovery row **`Promoted`** → reply with score, rank, recommendation, top 3 risks.
 
 ---
 
-## 1. Job Opportunity Processing
+## ADVANCE — Next-round interview prep
 
-Follow `AI/job_search_workflow.md` (runbook) end-to-end. This prompt is the executable version of that loop.
+**Snippet file:** `AI/snippets/ADVANCE.md` · Runbook: `AI/job_advancement_workflow.md`
 
-### Copy-paste (attach JD or URL below)
+Use when a **new interview round** needs its own prep file. Resolves job from name — **no @-tags required**.
 
 ```text
-@AI/prompt_library.md §1 — Job Opportunity Processing
+ADVANCE [Company / role phrase]
 
-Process the job below using my Job Search OS. Read the files listed in §1, then write the Stage 1 report and update the tracker. Reply in chat with: weighted score, score band, decision rank, recommendation, and top 3 risks.
-
-[Paste JD or URL here]
+[Next round context: type, interviewer, date, notes from prior round]
 ```
 
-### Read (always)
+**Not for:** reschedule same round (use **UPDATE**) · new role (use **PROMOTE**).
 
-- `AI/job_search_workflow.md` — process order
-- `Career/search_context/master_context.md`
-- `Career/search_context/career_positioning.md`
-- `Career/search_context/role_scorecard.md`
-- `Career/applications_tracker.md` — check for duplicate company/role before creating a file
-- `Career/opportunities_tracker.md` — check for existing row; if §1 runs without a discovery row, backfill one as **`Promoted`** after write
+---
 
-### Duplicate guardrail
+## UPDATE — Sync pipeline status
 
-Before creating a Stage 1 file:
+**Snippet file:** `AI/snippets/UPDATE.md` · Runbook: `AI/job_advancement_workflow.md` → Status update pass
 
-1. Match company + role (or close title variant) in **`applications_tracker.md`** → stop; point to existing file and rank.
-2. Match in **`opportunities_tracker.md`** → if already **Promoted** or **Already processed**, stop; same pointer.
-3. If new via §1 (inbound, no prior discovery row) → after Stage 1 + tracker, append discovery row with Decision **`Promoted`**.
+```text
+UPDATE [Company / role phrase]
 
-### Read (only if needed)
+New info: [what changed]
+```
 
-- `Career/search_context/career_goals.md` — deep narrative only
-- `Career/search_context/target_companies.md` — if company tier context helps
+**Not for:** next-round prep (use **ADVANCE**) · new role (use **PROMOTE**).
 
-### Execute (in order)
+---
 
-1. **Capture** — company, role, location, link, source, date discovered (today if not given)
-2. **Analyze** — strategic fit table (10 dimensions in template)
-3. **Score** — all 7 dimensions from `role_scorecard.md` with weighted total and score band
-4. **Decide** — recommendation + **decision rank** vs existing pipeline + **priority rationale** (rank can differ from score)
-5. **Write Stage 1 file** — copy `Career/Applications/templates/application_template.md` → `Career/Applications/company_role_location_YYYY-MM-DD.md` (lowercase, underscores, today’s date)
-6. **Update tracker** — `Career/applications_tracker.md`: Pipeline Summary row, Open Items row, Update Log line, rank note if needed
-7. **Discovery backfill** — if no matching row in `Career/opportunities_tracker.md`, add one with Decision **`Promoted`**
-8. **Canvas** — auto-synced on save by `AI/.cursor/hooks/sync_pipeline_canvas.mjs`; if needed run `node AI/.cursor/hooks/sync_pipeline_canvas.mjs --force`
-9. **Reply in chat** — executive summary (do not skip files and only chat)
+## 1. Job Opportunity Processing → **PROMOTE**
 
-### Write (required)
+> **Use `PROMOTE` instead.** This section kept as a pointer for legacy chat references.
 
-| Output | Path |
-|---|---|
-| Stage 1 opportunity report | `Career/Applications/company_role_location_YYYY-MM-DD.md` |
-| Live pipeline | `Career/applications_tracker.md` |
-| Pipeline dashboard (visual) | `AI/canvases/applications-tracker.canvas.tsx` |
-
-Stage 2 (CV, outreach, interview prep) — **do not** generate unless the role is already active (referral, recruiter, interview, or explicit apply).
-
-### Constraints
-
-- Do not hallucinate; flag assumptions
-- Be candid and practical
-- Do not edit `career_goals.md` or `target_companies.md` for pipeline status
-- Default model: **Auto** (`AI/cursor_model_usage.md`)
+All Stage 1 processing — discovery handoff or inbound JD — runs via **`AI/snippets/PROMOTE.md`** + **`AI/job_search_workflow.md`**. There is no separate §1 workflow.
 
 ---
 
@@ -118,13 +113,15 @@ Read: `Career/search_context/target_companies.md` + `Career/search_context/caree
 
 ---
 
-## 4. Stage 2 — Deep Prep (role active)
+## 4. Stage 2 — Apply assets (role active)
 
-**When:** referral secured, recruiter engaged, interview scheduled, or explicit apply.
+**When:** referral secured, recruiter engaged, explicit apply — **before or alongside** first contact.
 
-**Read:** the opportunity file + `Career/search_context/role_scorecard.md`.
+**Not for interview prep.** Calls and rounds → use **ADVANCE**. Interview execution lives in `Career/Applications/preparation/{process}/round_N/`.
 
-**Write:** append Stage 2 sections to that file (CV tailoring, outreach drafts, interview prep) per `application_template.md`. Do not create a parallel doc unless user prefers `*_stage2.md`.
+**Read:** the opportunity file + `Career/search_context/role_scorecard.md` + `Career/search_context/career_positioning.md`.
+
+**Write:** append to the opportunity file only: CV tailoring bullets, cover letter / outreach drafts, apply checklist.
 
 ---
 
@@ -148,16 +145,16 @@ Review Job Search OS critically: redundancy, overengineering, gaps, automation, 
 
 **When:** Friday or stale follow-ups.
 
-**Read:** `Career/applications_tracker.md` only.
+**Read:** `Career/applications_tracker.md` + active `preparation/*/process_log.md` files.
 
-**Tasks:** stale follow-ups, unknown comp, rank still valid, propose tracker edits.
+**Tasks:** stale follow-ups, interview prep gaps, rank validation, pause/archive candidates.
 
-**Write:** update tracker if changed (canvas auto-syncs via hook; fallback `node AI/.cursor/hooks/sync_pipeline_canvas.mjs --force`).
+**Write:** update tracker + process logs if changed (canvas auto-syncs via hook).
 
-**Output:** top 3 actions · stale items · rank changes · pause/archive candidates
+**Output:** top 3 actions · stale items · rank changes · interview prep gaps · pause/archive candidates
 
 ---
 
 ## 8. Discovery scan
 
-Same as **RUN_DISCOVERY** at the top of this file → `AI/snippets/RUN_DISCOVERY.md` + `AI/job_discovery_workflow.md`.
+Same as **RUN_DISCOVERY** → `AI/snippets/RUN_DISCOVERY.md` + `AI/job_discovery_workflow.md`.
